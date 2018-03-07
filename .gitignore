@@ -1,0 +1,9 @@
+HW*/*.log
+HW*/*.gz
+HW*/*.aux
+
+# Mac
+*.DS_Store
+
+# Windows
+Thumbs.db
