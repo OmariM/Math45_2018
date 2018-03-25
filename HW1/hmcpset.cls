@@ -1,4 +1,3 @@
-
 % HMC Math dept HW class file
 % v0.04 by Eric J. Malm, 10 Mar 2005
 %%% IDENTIFICATION --------------------------------------------------------
@@ -46,18 +45,18 @@
 \DeclareOption{boxed}{%
     \hmcpset@boxedtrue%
 }
-
+   
 % don't box problem statements
 \DeclareOption{unboxed}{%
     \hmcpset@boxedfalse%
 }
-
+   
 % pass remaining options to article class
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{article}}
 
 %%% EXECUTION OF OPTIONS --------------------------------------------------
 %% default to:
-% including header,
+% including header, 
 % loading mathpazo package for palatino fonts,
 % boxing problem statements
 \ExecuteOptions{header,palatino,boxed}
@@ -132,11 +131,11 @@
 %% commands for upper-right id header block
 \newcommand{\headerblock}{%
 \begin{flushright}
-\mbox{\hmcpset@name}\protect\
-\mbox{\hmcpset@class}\protect\
-\mbox{\hmcpset@assignment}\protect\
+\mbox{\hmcpset@name}\protect\\
+\mbox{\hmcpset@class}\protect\\
+\mbox{\hmcpset@assignment}\protect\\
 \hmcpset@duedate%
-\ifx\hmcpset@extraline\empty\else\protect\\hmcpset@extraline\fi%
+\ifx\hmcpset@extraline\empty\else\protect\\\hmcpset@extraline\fi%
 \end{flushright}%
 }
 
@@ -156,4 +155,3 @@
 \newcommand{\assignment}[1]{\def\hmcpset@assignment{#1}}
 \newcommand{\duedate}[1]{\def\hmcpset@duedate{#1}}
 \newcommand{\extraline}[1]{\def\hmcpset@extraline{#1}}
-
